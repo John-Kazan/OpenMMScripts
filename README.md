@@ -7,6 +7,7 @@ The repository includes:
 - `openmm_npt.py`: A Python script for running NPT simulations using OpenMM.
 - `openmm_npt_gpu.sh`: A wrapper script for automatically loading the correct CUDA version and OpenMM environment on the PHX cluster.
 - `submit_sbatch.sh`: A script for submitting simulation jobs to a scheduler (e.g., SLURM).
+- `pdb/1btl.pdb`: A PDB file for testing.
 
 ### Installation
 
