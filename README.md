@@ -1,6 +1,12 @@
 ## OpenMM NPT Simulation Scripts
 
-This repository provides scripts for running constant pressure, constant temperature (NPT) molecular dynamics simulations using OpenMM. 
+This repository contains scripts for running constant pressure, constant temperature (NPT) molecular dynamics simulations using OpenMM. Some scripts are designed for use on the ASU PHX cluster, but can be adapted for other environments. 
+
+The repository includes:
+
+- `openmm_npt.py`: A Python script for running NPT simulations using OpenMM.
+- `openmm_npt_gpu.sh`: A wrapper script for automatically loading the correct CUDA version and OpenMM environment on the PHX cluster.
+- `submit_sbatch.sh`: A script for submitting simulation jobs to a scheduler (e.g., SLURM).
 
 ### Installation
 
