@@ -15,7 +15,7 @@ This repository provides scripts for running constant pressure, constant tempera
 2. **Clone this repository:**
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/John-Kazan/OpenMMScripts
    ```
 
 ### Running Simulations
