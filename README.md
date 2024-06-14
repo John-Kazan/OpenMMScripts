@@ -39,7 +39,7 @@ This wrapper script automatically loads the correct CUDA version and OpenMM envi
 **Usage:**
 
 ```bash
-./openmm_npt_gpu.sh -pdb 1btl.pdb
+openmm_npt_gpu.sh -pdb 1btl.pdb
 ```
 
 Replace `1btl.pdb` with your PDB file or use the one provided for testing.
