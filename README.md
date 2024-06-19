@@ -63,7 +63,7 @@ To submit the simulation to a scheduler (e.g., SLURM), use the `submit_sbatch.sh
 
 **Before submission:**
 
-1. **Edit `submit_sbatch.sh`:**  
+1. **Edit** `submit_sbatch.sh`:
    - Modify the `export PATH="/scratch/ikazan/ztest:${PATH}"` line to reflect your own path.
    - Modify the `openmm_npt.sh -pdb ./pdb/1btl.pdb` line to reflect your own PDB.
 
