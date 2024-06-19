@@ -45,14 +45,14 @@ python openmm_npt.py -pdb ./pdb/1btl.pdb
 
 Replace `pdb/1btl.pdb` with the path to your PDB file.
 
-#### Using `openmm_npt_gpu.sh` (for PHX cluster)
+#### Using `openmm_npt.sh` (for PHX cluster)
 
 This wrapper script automatically loads the correct CUDA version and OpenMM environment on the PHX cluster.
 
 **Usage:**
 
 ```bash
-openmm_npt_gpu.sh -pdb ./pdb/1btl.pdb
+openmm_npt.sh -pdb ./pdb/1btl.pdb
 ```
 
 Replace `1btl.pdb` with your PDB file or use the one provided for testing.
