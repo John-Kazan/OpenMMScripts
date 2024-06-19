@@ -5,7 +5,7 @@ This repository contains scripts for running constant pressure, constant tempera
 The repository includes:
 
 - `openmm_npt.py`: A Python script for running NPT simulations using OpenMM.
-- `openmm_npt_gpu.sh`: A wrapper script for automatically loading the correct CUDA version and OpenMM environment on the PHX cluster.
+- `openmm_npt.sh`: A wrapper script for automatically loading the correct CUDA version and OpenMM environment on the PHX cluster.
 - `submit_sbatch.sh`: A script for submitting simulation jobs to a scheduler (e.g., SLURM).
 - `pdb/1btl.pdb`: A PDB file for testing.
 
@@ -19,16 +19,16 @@ The repository includes:
     conda install -y openmm pdbfixer -c conda-forge
     ```
 
+    make sure you have conda initialized in your environment:
+
+    ```bash
+    conda init bash
+    ```
+
 2. **Clone this repository:**
 
    ```bash
    git clone https://github.com/John-Kazan/OpenMMScripts
-   ```
-
-3. **Change the permissons of the files:**
-
-   ```bash
-   chmod 755 openmm_npt.py openmm_npt_gpu.sh submit_sbatch.sh
    ```
 
 ### Running Simulations
