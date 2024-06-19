@@ -16,13 +16,19 @@ The repository includes:
     ```bash
     conda create -y -n OpenMM -c conda-forge &&
     conda activate OpenMM && 
-    conda install -y openmm
+    conda install -y openmm pdbfixer -c conda-forge
     ```
 
 2. **Clone this repository:**
 
    ```bash
    git clone https://github.com/John-Kazan/OpenMMScripts
+   ```
+
+3. **Change the permissons of the files:**
+
+   ```bash
+   chmod 755 openmm_npt.py openmm_npt_gpu.sh submit_sbatch.sh
    ```
 
 ### Running Simulations
@@ -34,10 +40,10 @@ This script runs the NPT simulation directly using OpenMM. It utilizes GPU (CUDA
 **Usage:**
 
 ```bash
-python openmm_npt.py -pdb 1btl.pdb
+python openmm_npt.py -pdb ./pdb/1btl.pdb
 ```
 
-Replace `1btl.pdb` with the path to your PDB file.
+Replace `pdb/1btl.pdb` with the path to your PDB file.
 
 #### Using `openmm_npt_gpu.sh` (for PHX cluster)
 
@@ -46,7 +52,7 @@ This wrapper script automatically loads the correct CUDA version and OpenMM envi
 **Usage:**
 
 ```bash
-openmm_npt_gpu.sh -pdb 1btl.pdb
+openmm_npt_gpu.sh -pdb ./pdb/1btl.pdb
 ```
 
 Replace `1btl.pdb` with your PDB file or use the one provided for testing.
@@ -59,7 +65,7 @@ To submit the simulation to a scheduler (e.g., SLURM), use the `submit_sbatch.sh
 
 1. **Edit `submit_sbatch.sh`:**  
    - Modify the `export PATH="/scratch/ikazan/ztest:${PATH}"` line to reflect your own path.
-   - Modify the `openmm_npt.sh -pdb 1btl.pdb` line to reflect your own PDB.
+   - Modify the `openmm_npt.sh -pdb ./pdb/1btl.pdb` line to reflect your own PDB.
 
 **Submission:**
 
