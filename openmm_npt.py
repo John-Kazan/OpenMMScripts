@@ -479,7 +479,7 @@ def main():
     npt_gpu_parameters = {
         'input_pdb_file': 'system.pdb',
         'input_state_file': f'{last_file}',
-        'output_prefix': f'{pdb_file_name}_npt_gpu_{int(last_file.replace('.xml', '').split('_')[-1])+1:06}',
+        'output_prefix': f'{pdb_file_name}_npt_gpu_{int(last_file.replace('.xml', '').split('_')[-1])+1:05}',
         'platform_name': 'CUDA',
         'nsteps': 50000000, # 50000000 * 0.002 = 100ns
     }
