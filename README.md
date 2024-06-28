@@ -8,6 +8,7 @@ The repository includes:
 - `openmm_npt.sh`: A wrapper script for automatically loading the correct CUDA version and OpenMM environment on the PHX cluster.
 - `submit_sbatch.sh`: A script for submitting simulation jobs to a scheduler (e.g., SLURM).
 - `pdb/1btl.pdb`: A PDB file for testing.
+- `setup.sh`: A helper script to set up the environment.
 
 ### Installation
 
@@ -30,6 +31,12 @@ The repository includes:
    ```bash
    git clone https://github.com/John-Kazan/OpenMMScripts.git
    ```
+
+3. **Run the setup script:**
+
+    ```bash
+    setup.sh
+    ```
 
 ### Running Simulations
 
@@ -64,7 +71,6 @@ To submit the simulation to a scheduler (e.g., SLURM), use the `submit_sbatch.sh
 **Before submission:**
 
 Edit `submit_sbatch.sh`:
-- Modify the `export PATH="/path/to/your/cloned/repository/OpenMMScripts:${PATH}"` line to reflect your own path.
 - Modify the `openmm_npt.sh -pdb ./pdb/1btl.pdb` line to reflect your own PDB.
 
 **Submission:**
