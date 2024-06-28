@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL
 
 (
-export PATH="/scratch/ikazan/ztest:${PATH}"
+export PATH="/path/to/your/cloned/repository/OpenMMScripts:${PATH}"
 openmm_npt.sh -pdb ./pdb/1btl.pdb
 )
 
