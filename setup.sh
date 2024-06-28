@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 OpenMMScripts_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$OpenMMScripts_path:$PATH"
 
 add_to_bashrc() {
     echo "" >> ~/.bashrc
