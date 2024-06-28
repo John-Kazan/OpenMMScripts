@@ -10,5 +10,3 @@
 #SBATCH --mail-type=ALL
 
 (openmm_npt.sh -pdb ./pdb/1btl.pdb)
-
-(sbatch submit_sbatch.sh)
