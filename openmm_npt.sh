@@ -20,18 +20,19 @@ echo "--${FUNCNAME[0]} end: $(date)"
 }
 
 while [[ "$#" > 0 ]]; do case $1 in
--pdb|--input_pdb_file) pdb_file="$2"; shift;;
+-pdb|--input_pdb_file) pdb_file_path="$2"; shift;;
 *) echo "Unknown parameter passed: $1"; exit 1;;
 esac; shift; done
 
-pdb_file=${pdb_file}; echo "Protein file: ${pdb_file}"
+pdb_file_path=${pdb_file_path}; echo "Protein file: ${pdb_file}"
+pdb_file=$(basename ${pdb_file_path})
 pdb_file_name=${pdb_file/.pdb/}
 
 initial_directory=$(pwd)
 work_directory=${initial_directory}/${code_name/.sh/}_run
 mkdir -pv ${work_directory}
 if [ ! -f "${work_directory}/${pdb_file}" ]; then
-    cp -v ${pdb_file} ${work_directory}/
+    cp -v ${pdb_file_path} ${work_directory}/
 fi
 cd ${work_directory}; pwd
 
