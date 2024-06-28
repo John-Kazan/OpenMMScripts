@@ -9,4 +9,4 @@
 #SBATCH --error=slurm.%j.err
 #SBATCH --mail-type=ALL
 
-(openmm_npt.sh -pdb ./pdb/1btl.pdb)
+openmm_npt.sh -pdb ./pdb/1btl.pdb
