@@ -30,7 +30,9 @@ pdb_file_name=${pdb_file/.pdb/}
 initial_directory=$(pwd)
 work_directory=${initial_directory}/${code_name/.sh/}_run
 mkdir -pv ${work_directory}
-cp -v ${pdb_file} ${work_directory}/
+if [ ! -f "${work_directory}/${pdb_file}" ]; then
+    cp -v ${pdb_file} ${work_directory}/
+fi
 cd ${work_directory}; pwd
 
 (openmm_production_npt_gpu)

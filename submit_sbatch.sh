@@ -9,7 +9,9 @@
 #SBATCH --error=slurm.%j.err
 #SBATCH --mail-type=ALL
 
+(
 export PATH="/scratch/ikazan/ztest:${PATH}"
 openmm_npt.sh -pdb 1btl.pdb
+)
 
-seff $SLURM_JOB_ID
+sbatch submit_sbatch.sh
