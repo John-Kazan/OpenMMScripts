@@ -402,6 +402,7 @@ def main():
     input_pdb_file = args.input_pdb_file
 
     pdb_file_name = os.path.basename(os.path.realpath(input_pdb_file)).replace('.pdb', '')
+    print(pdb_file_name)
 
     # Fix pdb
     fix_pdb(input_pdb_file)

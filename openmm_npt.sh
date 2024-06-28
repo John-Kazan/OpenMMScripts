@@ -24,12 +24,11 @@ while [[ "$#" > 0 ]]; do case $1 in
 *) echo "Unknown parameter passed: $1"; exit 1;;
 esac; shift; done
 
-pdb_file_path=${pdb_file_path}; echo "Protein file: ${pdb_file}"
-pdb_file=$(basename ${pdb_file_path})
+pdb_file=$(basename ${pdb_file_path}); echo "Protein file: ${pdb_file}"
 pdb_file_name=${pdb_file/.pdb/}
 
 initial_directory=$(pwd)
-work_directory=${initial_directory}/${code_name/.sh/}_run
+work_directory=${initial_directory}/${code_name/.sh/}_${pdb_file_name}_run
 mkdir -pv ${work_directory}
 if [ ! -f "${work_directory}/${pdb_file}" ]; then
     cp -v ${pdb_file_path} ${work_directory}/
