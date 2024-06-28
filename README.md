@@ -28,7 +28,7 @@ The repository includes:
 2. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/John-Kazan/OpenMMScripts
+   git clone https://github.com/John-Kazan/OpenMMScripts.git
    ```
 
 ### Running Simulations
