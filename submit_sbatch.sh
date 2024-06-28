@@ -11,7 +11,7 @@
 
 (
 export PATH="/scratch/ikazan/ztest:${PATH}"
-openmm_npt.sh -pdb 1btl.pdb
+openmm_npt.sh -pdb ./pdb/1btl.pdb
 )
 
 sbatch submit_sbatch.sh
