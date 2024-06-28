@@ -35,7 +35,7 @@ The repository includes:
 3. **Run the setup script:**
 
     ```bash
-    setup.sh
+    ./setup.sh
     ```
 
 ### Running Simulations

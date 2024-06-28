@@ -4,7 +4,7 @@ OpenMMScripts_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 add_to_bashrc() {
     echo "" >> ~/.bashrc
-    echo "# Automatically added by setup.sh script in the repository" >> ~/.bashrc
+    echo "# Automatically added by setup.sh script for OpenMMScripts repository" >> ~/.bashrc
     echo "export PATH=\"$OpenMMScripts_path:\$PATH\"" >> ~/.bashrc
 }
 

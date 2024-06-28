@@ -9,9 +9,6 @@
 #SBATCH --error=slurm.%j.err
 #SBATCH --mail-type=ALL
 
-(
-export PATH="/path/to/your/cloned/repository/OpenMMScripts:${PATH}"
-openmm_npt.sh -pdb ./pdb/1btl.pdb
-)
+(openmm_npt.sh -pdb ./pdb/1btl.pdb)
 
-sbatch submit_sbatch.sh
+(sbatch submit_sbatch.sh)
